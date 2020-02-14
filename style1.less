@@ -1,0 +1,81 @@
+@alt-box: 50px;
+@anch-box: 50px;
+@br-rd: 5px;
+@font-zs: 12px;
+@bg-color: transparent;
+body{
+    font-family: Arial;
+    font-size: @font-zs;
+    background: url(img/vintage-concrete.png) repeat left bottom;
+}
+.container{
+    width: 1058px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: rgba(148, 148, 148, 0.3);
+    border: 2px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #000000;
+    padding-bottom: 30px;
+}
+/*Mixin*/
+.format (@br-rd, @anch-box, @alt-box, @font-zs){
+    border-radius: @br-rd;
+    width: @anch-box;
+    height: @alt-box;
+    font-size: @font-zs;
+    background-color: @bg-color;
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.titulo{
+    .format(@br-rd, @anch-box, @alt-box, @font-zs);
+    color: rgb(2, 0, 0);
+    font-weight: 800;
+}
+.elemento{
+    .format(@br-rd, @anch-box, @alt-box, @font-zs);
+    color: rgb(4, 33, 128);
+    box-shadow: 0px 6px 2px #000000;
+}
+span{
+    font-size: 18px;
+    font-weight: 700;
+}
+.primera{
+    clear: top;
+}
+.ult{
+    float: right;
+    margin-left: 3px;
+}
+.separa{
+    margin-left: 9px;
+}
+.separa-l{
+    margin-left: 50px;
+}
+.azul{
+    background-color: rgb(0, 246, 255);
+    border-radius: @br-rd;
+}
+.amarillo{
+    background-color: rgb(253, 254, 2);
+    border-radius: @br-rd;
+}
+.rosa{
+    background-color: rgb(254, 0, 246);
+    border-radius: @br-rd;
+}
+.verde{
+    background-color: rgb(11, 255, 1);
+    border-radius: @br-rd;
+}
+.noids{
+    margin-left: 69px;
+}
