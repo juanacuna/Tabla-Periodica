@@ -638,20 +638,20 @@ function drawHangar(dt) {
     ctx.fillStyle = selected ? "rgba(61, 214, 198, 0.15)" : "rgba(255,255,255,0.04)";
     ctx.strokeStyle = selected ? plane.color : "rgba(138,160,181,0.35)";
     ctx.lineWidth = selected ? 2.5 : 1;
-    roundRect(ctx, x, y, cardW, 380, 8);
+    roundRect(ctx, x, y, cardW, 420, 8);
     ctx.fill();
     ctx.stroke();
 
-    drawPlayerPlane(ctx, x + cardW / 2, y + 100, plane, hangarCursorBlink + i, selected);
+    drawPlayerPlane(ctx, x + cardW / 2, y + 90, plane, hangarCursorBlink + i, selected);
 
     ctx.textAlign = "center";
     ctx.fillStyle = plane.color;
     ctx.font = "700 20px Orbitron, sans-serif";
-    ctx.fillText(plane.name, x + cardW / 2, y + 180);
+    ctx.fillText(plane.name, x + cardW / 2, y + 170);
 
     ctx.fillStyle = "#8aa0b5";
     ctx.font = "400 15px Rajdhani, sans-serif";
-    wrapText(ctx, plane.tagline, x + cardW / 2, y + 210, cardW - 36, 20);
+    wrapText(ctx, plane.tagline, x + cardW / 2, y + 198, cardW - 36, 20);
 
     ctx.fillStyle = "#e8f0f7";
     ctx.font = "600 15px Rajdhani, sans-serif";
@@ -663,16 +663,16 @@ function drawHangar(dt) {
       `Especial  ${plane.special.toUpperCase()}`,
     ];
     stats.forEach((s, si) => {
-      ctx.fillText(s, x + cardW / 2, y + 270 + si * 22);
+      ctx.fillText(s, x + cardW / 2, y + 255 + si * 22);
     });
 
     ctx.font = "700 16px Orbitron, sans-serif";
     if (owned) {
       ctx.fillStyle = "#3dd6c6";
-      ctx.fillText(selected ? "► LISTO" : "DESBLOQUEADO", x + cardW / 2, y + 355);
+      ctx.fillText(selected ? "► LISTO" : "DESBLOQUEADO", x + cardW / 2, y + 390);
     } else {
       ctx.fillStyle = money >= plane.price ? "#f0c14b" : "#ff4d6d";
-      ctx.fillText(`COMPRAR $${plane.price}`, x + cardW / 2, y + 355);
+      ctx.fillText(`COMPRAR $${plane.price}`, x + cardW / 2, y + 390);
     }
   });
 
