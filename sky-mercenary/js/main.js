@@ -1,13 +1,3 @@
-import { PLANES, getPlane } from "./planes.js";
-import {
-  drawSky,
-  drawPlayerPlane,
-  drawEnemy,
-  drawBullet,
-  drawParticle,
-  drawPowerup,
-} from "./draw.js";
-
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const ui = document.getElementById("ui");

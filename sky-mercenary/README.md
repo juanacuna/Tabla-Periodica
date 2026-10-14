@@ -6,7 +6,7 @@ Shoot ’em up horizontal en HD (canvas 1280×720), inspirado en el género de *
 
 ## Cómo jugar
 
-Abre `index.html` en un navegador moderno (o sirve la carpeta con cualquier static server).
+Abre `index.html` con doble clic (funciona con `file://`) o sírvelo con cualquier static server.
 
 | Control | Acción |
 |---------|--------|

@@ -1,6 +1,6 @@
 /** Aviones jugables — diseño original (no IP Capcom). */
 
-export const PLANES = [
+const PLANES = [
   {
     id: "falcon",
     name: "FALCON-X",
@@ -48,6 +48,6 @@ export const PLANES = [
   },
 ];
 
-export function getPlane(id) {
+function getPlane(id) {
   return PLANES.find((p) => p.id === id) || PLANES[0];
 }

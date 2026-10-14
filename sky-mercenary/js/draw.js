@@ -1,6 +1,6 @@
 /** Render HD procedural — aviones, enemigos, FX. */
 
-export function drawSky(ctx, w, h, t, parallax) {
+function drawSky(ctx, w, h, t, parallax) {
   const g = ctx.createLinearGradient(0, 0, 0, h);
   g.addColorStop(0, "#0a1a33");
   g.addColorStop(0.45, "#12304f");
@@ -76,7 +76,7 @@ function drawTerrain(ctx, w, h, parallax) {
   ctx.fill();
 }
 
-export function drawPlayerPlane(ctx, x, y, plane, t, thrusting) {
+function drawPlayerPlane(ctx, x, y, plane, t, thrusting) {
   ctx.save();
   ctx.translate(x, y);
   const s = 1.15 * (plane.wingspan || 1);
@@ -151,7 +151,7 @@ export function drawPlayerPlane(ctx, x, y, plane, t, thrusting) {
   ctx.restore();
 }
 
-export function drawEnemy(ctx, e, t) {
+function drawEnemy(ctx, e, t) {
   ctx.save();
   ctx.translate(e.x, e.y);
   ctx.rotate(e.rot || 0);
@@ -217,7 +217,7 @@ export function drawEnemy(ctx, e, t) {
   ctx.restore();
 }
 
-export function drawBullet(ctx, b) {
+function drawBullet(ctx, b) {
   ctx.save();
   ctx.translate(b.x, b.y);
   if (b.from === "player") {
@@ -240,7 +240,7 @@ export function drawBullet(ctx, b) {
   ctx.restore();
 }
 
-export function drawParticle(ctx, p) {
+function drawParticle(ctx, p) {
   ctx.globalAlpha = Math.max(0, p.life);
   ctx.fillStyle = p.color;
   ctx.beginPath();
@@ -249,7 +249,7 @@ export function drawParticle(ctx, p) {
   ctx.globalAlpha = 1;
 }
 
-export function drawPowerup(ctx, p, t) {
+function drawPowerup(ctx, p, t) {
   ctx.save();
   ctx.translate(p.x, p.y);
   ctx.rotate(t * 2);
