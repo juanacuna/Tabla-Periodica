@@ -6,7 +6,17 @@ Shoot ’em up horizontal en HD (canvas 1280×720), inspirado en el género de *
 
 ## Cómo jugar
 
-Abre `index.html` con doble clic (funciona con `file://`) o sírvelo con cualquier static server.
+`index.html` es **autocontenido** (CSS + JS embebidos). Ábrelo con doble clic; funciona con `file://` sin servidor ni CORS.
+
+Si ves un error CORS de `type="module"`, tienes una copia vieja. Actualiza la rama del PR:
+
+```bash
+git fetch origin
+git checkout cursor/sky-mercenary-hd-5826
+git pull origin cursor/sky-mercenary-hd-5826
+```
+
+Luego abre de nuevo `sky-mercenary/index.html`.
 
 | Control | Acción |
 |---------|--------|
